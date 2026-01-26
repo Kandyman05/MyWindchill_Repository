@@ -21,7 +21,7 @@ public class ListenerInitiateClass extends StandardManager implements ListenerOn
 	@Override
 	protected synchronized void performStartupProcess() throws ManagerException {
 		//Describe By Link (Mechanical and Electrical Part)
-		getManagerService().addEventListener(new DescribeByLinkListener(ClassName),PersistenceManagerEvent.generateEventKey(PersistenceManagerEvent.POST_STORE));
+		getManagerService().addEventListener(new describeByLinkListener(ClassName),PersistenceManagerEvent.generateEventKey(PersistenceManagerEvent.POST_STORE));
 	}
 	
 }
